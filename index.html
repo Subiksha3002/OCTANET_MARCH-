@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive website landing page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="js.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="world">Megaverse</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">Galaxy</a>
+                <a href="#">Star</a>
+                <a href="#">Moon</a>
+                <a href="#">Universe Model</a>
+            </div>
+        </div>
+    </header>
+    <section class="Galaxy">
+        <video class="video-slide" src="4.mp4" autoplay muted loop>
+
+        </video>
+        <div class="star">
+            <h1>Constellation</h1><br>
+            <p>Exploring the night sky can be a rewarding and accessible experience. With a little preparation and the right tools, you can embark on your own stargazing adventure. Find a location away from light pollution, equip yourself with a star chart or mobile app, and allow your eyes to adjust to the darkness. As you gaze upwards, remember that you are witnessing the light from stars that may have traveled for millions of years, connecting you to the wonders of the universe.</p>
+             <a href="#">Read More</a>    
+        </div>
+        <div class="media-icons">
+            <a href="#"><i class="fa fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+        <div class="slide-nav">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn active"></div>
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+
+    </section>
+    <script type="text/javascript">
+        const menubtn=document.querySelector(".menu-btn");
+        menubtn.addEventListener("click",() => {
+            menubtn.classList.toggle("active");
+        });
+        const btns= document.querySelectorAll(".nav-btn");
+        var slidenav=function(manual){
+            btns.forEach((btn) =>{
+                btn.classList.remove("active");
+            });
+            btns[manual].classList.add("active");
+        }
+        btns.forEach((btn , i) => {
+            btn.addEventListener("click",() =>{
+                slideNav(i);
+            });
+        
+        });
+
+        
+        </script>
+    
+</body>
+</html>
